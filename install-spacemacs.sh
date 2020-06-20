@@ -38,7 +38,7 @@ fi
 
 echo "Checking for Spacemacs installation"
 
-if ! [-f ".spacemacs" ]; then
+if ! test -f ".spacemacs"; then
     $(git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d)
 else
     echo "~/.spacemacs already exists"
